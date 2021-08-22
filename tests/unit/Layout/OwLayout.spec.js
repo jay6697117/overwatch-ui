@@ -1,41 +1,41 @@
-import {expect} from 'chai'
-import {shallowMount} from '@vue/test-utils'
-import OwLayout from '../../../src/components/Layout/OwLayout.vue'
-import OwSider from '../../../src/components/Layout/OwSider.vue'
-import Vue from 'vue'
+import { expect } from 'chai';
+import { shallowMount } from '@vue/test-utils';
+import OwLayout from '../../../src/components/Layout/OwLayout.vue';
+import OwSider from '../../../src/components/Layout/OwSider.vue';
+import Vue from 'vue';
 
 const testData = {
-    slot: 'Hello',
-}
+  slot: 'Hello'
+};
 
 describe('OwLayout.vue', () => {
-    it('should exist', () => {
-        const OwLayoutWrapper = shallowMount(OwLayout)
-        expect(OwLayoutWrapper).to.exist
-    })
+  it('should exist', () => {
+    const OwLayoutWrapper = shallowMount(OwLayout);
+    expect(OwLayoutWrapper).to.exist;
+  });
 
-    it('should pass elements to slot', () => {
-        const {slot} = testData
-        const OwLayoutWrapper = shallowMount(OwLayout, {
-            slots: {
-                default: slot
-            }
-        })
+  it('should pass elements to slot', () => {
+    const { slot } = testData;
+    const OwLayoutWrapper = shallowMount(OwLayout, {
+      slots: {
+        default: slot
+      }
+    });
 
-        expect(OwLayoutWrapper.text()).to.equal(slot)
-    })
+    expect(OwLayoutWrapper.text()).to.equal(slot);
+  });
 
-    it('should add hasSider class if contains', (done) => {
-        const OwLayoutWrapper = shallowMount(OwLayout, {
-            slots: {
-                default: '<ow-sider></ow-sider>'
-            },
-            stubs: { OwSider }
-        })
+  it('should add hasSider class if contains', done => {
+    const OwLayoutWrapper = shallowMount(OwLayout, {
+      slots: {
+        default: '<ow-sider></ow-sider>'
+      },
+      stubs: { OwSider }
+    });
 
-        Vue.nextTick(() => {
-            expect(OwLayoutWrapper.classes()).contains('ow-layout-has-sider')
-            done()
-        })
-    })
-})
+    Vue.nextTick(() => {
+      expect(OwLayoutWrapper.classes()).contains('ow-layout-has-sider');
+      done();
+    });
+  });
+});

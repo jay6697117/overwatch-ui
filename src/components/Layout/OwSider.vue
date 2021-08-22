@@ -1,21 +1,19 @@
 <template>
-    <div v-show="visible" class="ow-sider">
-        <slot></slot>
-    </div>
+  <div v-show="visible" class="ow-sider">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "OwSider",
-        props: {
-            visible: {
-                type: Boolean,
-                default: true
-            }
-        },
+export default {
+  name: 'OwSider',
+  props: {
+    visible: {
+      type: Boolean,
+      default: true
     }
+  }
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

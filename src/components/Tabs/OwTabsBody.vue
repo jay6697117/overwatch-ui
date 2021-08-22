@@ -1,16 +1,14 @@
 <template>
-    <div class="ow-tabs-body">
-        <slot></slot>
-    </div>
+  <div class="ow-tabs-body">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "OwTabsBody",
-        inject: ['eventHub']
-    }
+export default {
+  name: 'OwTabsBody',
+  inject: ['eventHub']
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

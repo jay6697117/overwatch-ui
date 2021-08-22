@@ -1,51 +1,61 @@
 {
-    "name": "overwatch-ui",
-    "version": "1.8.5",
-    "description": "A UI library of Overwatch, built with Vue.js",
-    "main": "./dist/overwatch-ui.umd.min.js",
-    "private": false,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "build:ui": "vue-cli-service build --target lib --name overwatch-ui ./src/entry.js",
-        "test": "cross-env BABEL_ENV=test vue-cli-service test:unit",
-        "coverage": "open ./coverage/lcov-report/index.html"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Haixiang6123/overwatch-ui.git"
-    },
-    "keywords": [
-        "Vue",
-        "UI",
-        "Overwatch"
-    ],
-    "files": [
-        "dist/*"
-    ],
-    "dependencies": {
-        "vue": "^2.5.21"
-    },
-    "author": "Haixiang yan",
-    "license": "MIT",
-    "bugs": "https://github.com/Haixiang6123/overwatch-ui/issues",
-    "homepage": "https://haixiang6123.github.io/overwatch-ui-doc/#/",
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.5",
-        "@vue/cli-plugin-unit-mocha": "^3.0.5",
-        "@vue/cli-service": "^3.0.5",
-        "@vue/test-utils": "^1.0.0-beta.20",
-        "babel-plugin-istanbul": "^5.1.1",
-        "chai": "^4.2.0",
-        "cross-env": "^5.2.0",
-        "karma-coverage": "^1.1.2",
-        "karma-sinon": "^1.0.5",
-        "karma-sinon-chai": "^2.0.2",
-        "mocha": "^5.0.5",
-        "node-sass": "^4.11.0",
-        "sass-loader": "^7.1.0",
-        "sinon": "^7.3.2",
-        "sinon-chai": "^3.3.0",
-        "vue-template-compiler": "^2.5.21"
-    }
+  "name": "overwatch-ui",
+  "version": "1.8.5",
+  "description": "A UI library of Overwatch, built with Vue.js",
+  "main": "./dist/overwatch-ui.umd.min.js",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:ui": "vue-cli-service build --target lib --name overwatch-ui ./src/entry.js",
+    "test": "cross-env BABEL_ENV=test vue-cli-service test:unit",
+    "coverage": "open ./coverage/lcov-report/index.html",
+    "lint": "yarn prettier && yarn eslint",
+    "eslint": "eslint --fix --ext .js,.ts,.jsx,.tsx,.vue ./",
+    "prettier": "prettier --write './**/*.{css,less,json,js,ts,jsx,tsx,vue}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haixiang6123/overwatch-ui.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI",
+    "Overwatch"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "vue": "^2.5.21"
+  },
+  "author": "Haixiang yan",
+  "license": "MIT",
+  "bugs": "https://github.com/Haixiang6123/overwatch-ui/issues",
+  "homepage": "https://haixiang6123.github.io/overwatch-ui-doc/#/",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-plugin-unit-mocha": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^5.1.1",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.16.0",
+    "karma-coverage": "^1.1.2",
+    "karma-sinon": "^1.0.5",
+    "karma-sinon-chai": "^2.0.2",
+    "mocha": "^5.0.5",
+    "node-sass": "^4.11.0",
+    "prettier": "^2.3.2",
+    "sass-loader": "^7.1.0",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "vue-template-compiler": "^2.5.21"
+  }
 }

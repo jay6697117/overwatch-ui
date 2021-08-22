@@ -1,15 +1,13 @@
 <template>
-    <div class="ow-footer">
-        <slot></slot>
-    </div>
+  <div class="ow-footer">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "OwFooter"
-    }
+export default {
+  name: 'OwFooter'
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

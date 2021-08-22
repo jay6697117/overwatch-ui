@@ -1,31 +1,31 @@
-import OwAlert from '../components/Alert/OwAlert'
+import OwAlert from '../components/Alert/OwAlert';
 
-let currentOwAlert
+let currentOwAlert;
 
 export default {
-    install(Vue, options) {
-        // Add function $owToast to prototype
-        Vue.prototype.$owAlert = function (owAlertOptions) {
-            if (currentOwAlert) {
-                currentOwAlert.close()
-            }
-            currentOwAlert = createOwAlert(Vue, owAlertOptions, onClose)
-        }
-    }
-}
+  install(Vue, options) {
+    // Add function $owToast to prototype
+    Vue.prototype.$owAlert = function (owAlertOptions) {
+      if (currentOwAlert) {
+        currentOwAlert.close();
+      }
+      currentOwAlert = createOwAlert(Vue, owAlertOptions, onClose);
+    };
+  }
+};
 
 // Create OwAlert
 function createOwAlert(Vue, owAlertOptions, onClose) {
-    let OwAlertExt = Vue.extend(OwAlert)
-    let owAlert = new OwAlertExt({ propsData: owAlertOptions })
-    owAlert.$mount()
-    owAlert.$on('close', onClose)
-    document.body.appendChild(owAlert.$el)
+  let OwAlertExt = Vue.extend(OwAlert);
+  let owAlert = new OwAlertExt({ propsData: owAlertOptions });
+  owAlert.$mount();
+  owAlert.$on('close', onClose);
+  document.body.appendChild(owAlert.$el);
 
-    return owAlert
+  return owAlert;
 }
 
 // Close OwAlert handler
 function onClose() {
-    currentOwAlert = null
+  currentOwAlert = null;
 }

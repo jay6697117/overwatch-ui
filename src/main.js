@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import OwUI from './entry'
+import Vue from 'vue';
+import App from './App.vue';
+import OwUI from './entry';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(OwUI.plugins.$owAlert)
+Vue.use(OwUI.plugins.$owAlert);
 
 new Vue({
-    components: {
-        ...OwUI.Components
-    },
-    render: h => h(App),
-}).$mount('#app')
+  components: {
+    ...OwUI.Components
+  },
+  render: h => h(App)
+}).$mount('#app');

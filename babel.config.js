@@ -1,10 +1,8 @@
 module.exports = {
-    presets: [
-        '@vue/app'
-    ],
-    env: {
-        "test": {
-            "plugins": ["istanbul"]
-        }
+  presets: ['@vue/app'],
+  env: {
+    test: {
+      plugins: ['istanbul']
     }
-}
+  }
+};
